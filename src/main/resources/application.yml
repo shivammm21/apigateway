@@ -1,0 +1,23 @@
+server:
+  port: 8767
+
+spring:
+  application:
+    name: apigateway
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus,env,threaddump,httpexchanges
+  endpoint:
+    health:
+      show-details: always
+
+# Initial sample routes (can be overridden by Redis-admin APIs)
+# These are only comments; dynamic routing uses Redis hash 'routes'
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
